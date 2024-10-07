@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="navbar lg:px-20 px-5 bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li> 
+                      <li><a>Shop</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <div class="flex gap-4">
+                    <img src="images/logo.webp" alt="">
+                    <h1 class="text-2xl font-semibold">Peddy</h1>
+                  </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li> 
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                    <i class="fa-regular border-2 rounded-full p-2 fa-user"></i>
+                </div>
+              </div>
+        </nav>
+<!-- banner section -->
+ <section class="my-4 container mx-auto">
+    <h1 class="text-center text-xl font-semibold text-[#676363]">Bringing Families Together ❤️‍🔥 </h1>
+    <h1 class="lg:text-5xl text-4xl mt-4 text-center font-semibold">Your Path to Adoption <br> Starts Here</h1>
+    <div class="flex justify-center">
+        <p class="text-black px-2 lg:w-6/12 text-center mt-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking   at its layout. The point of using Lorem Ipsum is that it has a.</p>
+    </div>
+
+    <div class="text-center mt-8" >
+      <a href="#view-more"><button class="btn text-white px-8  bg-[#0E7A81] ">View More  </button></a>
+    </div>
+
+    <div class="flex justify-center">
+        <img src="images/pet.webp" alt="">
+    </div>
+ </section> 
+    </header>
+
+
+    <main id="view-more" class="container mx-auto">
+        <h1 class="text-4xl  text-center font-semibold">Adopt  Your  Best Friend</h1>
+        <div class="flex mt-5 justify-center text-center text-[#393636]">
+            <p class=" px-2 lg:w-5/12">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+        <!-- buttons -->
+        <div id=""> 
+          <div id="buttons-container" class="grid grid-cols-2 px-5 mb-10 gap-4 lg:grid-cols-4 justify-evenly mt-8">
+          
+          </div>
+           
+           <div class="flex px-2 justify-between">
+             <h1 class="text-2xl font-bold">Best Deal For you</h1>
+             <button class="btn bg-[#0E7A81] text-white">Sort by price</button>
+           </div>
+ 
+           <!-- card container -->
+           <div class="flex lg:flex-row px-5  flex-col gap-5  mb-5">
+             <!-- card -->
+             <div  class=" lg:w-[80%] w-[100%]  mt-5">
+               <!-- loading -->
+             <div id="loader" class="text-center hidden">
+               <span class="loading  text-center loading-bars loading-lg"></span>
+             </div>
+ 
+ 
+               <div id="not-availve" class="bg-[#F8F8F8]  hidden flex items-center lg:w-[100%] h-[500px] lg:px-44">
+                   <div>
+                     <div class="flex justify-center">
+                       <img src="images/error.webp" alt="">
+                     </div>
+                     <h1 class="text-2xl text-center font-bold">No Information Available</h1>
+                     <p class="text-center">
+                       It is a long established fact that a reader will be distracted by the readable content of a page when looking at 
+   its layout. The point of using Lorem Ipsum is that it has a.
+                     </p>
+                   </div>
+               </div>
+               <div id="card-container" class="grid   grid-cols-1  lg:grid-cols-3  gap-4 ">
+ 
+               </div>
+             </div>
+              <!-- like card -->
+               <div  class="border-2 rounded-lg flex justify-center w-[100%]  mt-5 lg:w-[30%]">
+                 <div id="like-image-container" class="grid grid-cols-2 h-[200px]   gap-4 p-5">
+ 
+                 </div>
+               </div>
+            </div>
+        </div>
+    </main>
+
+
+  <!-- modal -->
+   <!-- You can open the modal using ID.showModal() method -->
+ 
+<dialog id="show_imformation" class="modal">
+  
+</dialog>
+
+<!-- footer section -->
+ <footer class="">
+  <footer class="footer text-white justify-center lg:justify-around border-4     bg-black text-base-content p-10">
+   
+      <nav class="w-[100%] justify-center">
+        <h6 class="footer-title text-white text-2xl  flex items-center gap-2 "><img src="images/logo.webp" alt=""> Peddy </h6>
+        <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
+        <a class="link link-hover">Phone: +31 85 964 47 25</a>
+        <a class="link link-hover">Email: info@yourdomain.com</a>
+        <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+        <div class="flex gap-4 mt-5">
+          <img src="images/Group 2.png" alt="">
+          <img src="images/x-2 1.png" alt="">
+          <img src="images/Group 6.png" alt="">
+          <img src="images/Group 7.png" alt="">
+        </div>
+      </nav>
+      <div class="flex justify-center w-[100%]">
+        <nav class=" justify-center flex-col flex  gap-1   ">
+          <h6 class="footer-title">Useful Links</h6>
+          <a class="link link-hover">Home</a>
+          <a class="link link-hover">About Us</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Foundation</a>
+          <a class="link link-hover">Contact</a>
+        </nav> 
+      </div>
+      <form>
+        <h6 class="footer-title">Drop a Message</h6>
+        <fieldset class="form-control w-80">
+           
+          <div class=" ">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              class="input input-bordered bg-[#1F1F1F] join-item" />
+            </div>
+            <button class="btn btn-primary w-56 mt-3 join-item">Subscribe</button>
+        </fieldset>
+      </form>
+  </footer>
+ </footer>
+
+ <!-- modal 2 -->
+ <!-- Open the modal using ID.showModal() method -->
+ 
+<dialog id="my_modal_1" class="modal ">
+  <div class="modal-box p-10">
+    <h3 class="text-4xl text-center font-bold">Congrates</h3>
+    <p class="text-center mt-3 font-semibold">Adoption Process in Start Fory your Pet</p>
+    <p id="counting" class="py-4 text-6xl text-center font-bold"></p>
+     
+  </div>
+</dialog>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
